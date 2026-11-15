@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-canvas: #070b0e;
+    --bg-sidebar: #0a1015;
+    --bg-surface: #0f171d;
+    --bg-surface-elevated: #141e26;
+    --border-hairline: rgba(255, 255, 255, 0.08);
+    --border-warm: rgba(229, 169, 76, 0.28);
+    --accent-gold: #e5a94c;
+    --accent-cream: #e8dcc4;
+    --accent-green: #5ea86e;
+    --text-primary: #f2ede4;
+    --text-secondary: #9aa6b2;
+    --text-muted: #6c7883;
+  }
+
+  html,
+  body {
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+.font-display {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.font-mono-tabular {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom subtle dark scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070b0e;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(229, 169, 76, 0.4);
+}
+
+/* Leaflet dark styling overrides to harmonize with ANTHARIKSH charcoal palette */
+.leaflet-container {
+  background: #070b0e;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: #0f171d !important;
+  color: #f2ede4 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.65) !important;
+}
+
+.leaflet-popup-close-button {
+  color: #9aa6b2 !important;
+}
+
+/* Topographic wave subtle backdrop matching reference */
+.topo-bg {
+  background-image:
+    radial-gradient(ellipse 70% 50% at 75% 40%, rgba(229, 169, 76, 0.08), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 20% 20%, rgba(45, 92, 102, 0.08), transparent 65%);
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

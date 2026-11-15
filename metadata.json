@@ -1,0 +1,6 @@
+{
+  "name": "ANTHARIKSH – Earth Intelligence Platform",
+  "description": "Intelligent Earth observation and Synthetic Aperture Radar (SAR) intelligence platform for monitoring surface change, floods, deformation, and historical satellite imagery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
